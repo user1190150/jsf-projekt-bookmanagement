@@ -52,7 +52,24 @@ public class Book {
 		return emailadresses;
 	}
 	public void setEmailadresses(String[] emailadresses) {
+
 		this.emailadresses = emailadresses;
 	}
 	
+	
+	//Methods
+	public String save()
+	{
+		//TODO
+		return "index";
+	}
 }
+
+
+
+
+
+
+
+
+
