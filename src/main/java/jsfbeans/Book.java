@@ -2,6 +2,7 @@ package jsfbeans;
 
 import jakarta.inject.*;
 import jakarta.enterprise.context.RequestScoped;
+import jakarta.faces.event.ActionEvent;
 
 @Named
 @RequestScoped
@@ -62,6 +63,12 @@ public class Book {
 	{
 		//TODO
 		return "index";
+	}
+	
+	//Listener
+	public void saveListener (ActionEvent e)
+	{
+	    System.out.println("Abteilungen werden benachrichtigt: " + java.util.Arrays.toString(this.emailadresses));
 	}
 }
 

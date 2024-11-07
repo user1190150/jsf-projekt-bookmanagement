@@ -9,7 +9,7 @@
 <h:body>
   <h:form>
 
-        <h:panelGrid columns="1" style="width: 300px;">
+        <h:panelGrid columns="2" style="width: 500px;">
         
             <h:outputLabel value="Autor:" />
             <p:inputText value="#{book.author}" />
@@ -23,10 +23,18 @@
             <h:outputLabel value="Preis:" />
             <p:inputText value="#{book.price}" />
             
+            <h:outputText value="Abteilungen die benachrichtigt werden" />
+            <h:selectManyListbox value="#{book.emailadresses}">
+            	<f:selectItem itemValue="abteilung1@mycompany.com" itemLabel="Abteilung 1" />
+            	<f:selectItem itemValue="abteilung2@mycompany.com" itemLabel="Abteilung 2" />
+            </h:selectManyListbox>
+            
         </h:panelGrid>
 
         <!--Speichern TODO-->
-        <p:commandButton value="Speichern" action="#{book.save}" icon="pi pi-save" />
+        <p:commandButton value="Speichern" action="#{book.save}" actionListener="#{book.saveListener}" icon="pi pi-save" />
+        
+        
         
     </h:form>
 </h:body>
